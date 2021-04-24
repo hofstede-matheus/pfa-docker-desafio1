@@ -1,0 +1,7 @@
+node_modules/
+build/
+tmp/
+temp/
+/coverage.data
+/coverage/
+.env
