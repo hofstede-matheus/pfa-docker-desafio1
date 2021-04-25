@@ -1,17 +1,12 @@
-function getAllModules() {
+const connection = require("../database");
+
+async function getAllModules() {
+  const rows = await connection.query("SELECT * FROM mudules;");
+
+  console.log(rows);
+
   return {
-    modules: [
-      "Docker",
-      "Padrões e técnicas avançadas com Git e Github",
-      "Integração contínua",
-      "Kubernetes",
-      "Service Mesh com Istio (em breve)",
-      "Observabilidade (em breve)",
-      "Deploy nos Cloud Providers (em breve)",
-      "Fundamentos de Arquitetura de Software",
-      "Comunicação",
-      "RabbitMQ",
-    ],
+    modules: rows,
   };
 }
 
