@@ -6,8 +6,8 @@ app.get("/", (_, res) => {
   res.status(200).json({ message: "Hoi :D" });
 });
 
-app.get("/module", (_, res) => {
-  const modules = getAllModules();
+app.get("/module", async (_, res) => {
+  const modules = await getAllModules();
   res.status(200).json(modules);
 });
 

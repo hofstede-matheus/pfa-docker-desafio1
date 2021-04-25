@@ -1,9 +1,10 @@
-const connection = require("../database");
+const { connect } = require("../database");
 
 async function getAllModules() {
-  const rows = await connection.query("SELECT * FROM mudules;");
+  const connection = await connect();
+  const [rows] = await connection.execute("SELECT * FROM modules;");
 
-  console.log(rows);
+  connection.end();
 
   return {
     modules: rows,
