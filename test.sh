@@ -4,7 +4,7 @@ docker network create pfa
 
 docker run --network=pfa --name mysqldb -v "$PWD/mysql/data:/var/lib/mysql" -d -e MYSQL_ROOT_PASSWORD=wowsuchsecret -e MYSQL_DATABASE=pfa he4dless/pfa-docker-desafio1-mysql
 
-sleep 5
+sleep 10
 
 docker exec -i mysqldb bash -c 'mysql -uroot -p"$MYSQL_ROOT_PASSWORD" pfa < seed.sql'                                                           
 
