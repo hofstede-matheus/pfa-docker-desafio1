@@ -12,7 +12,7 @@ Crie um arquivo README.md especificando quais comandos precisamos executar para 
 
 Para rodar:
   - execute o script test.sh (testado apenas no linux)
-  - rode os seguintes comandos
+  - ou execute os seguintes comandos:
     - docker network create pfa
     - docker run --network=pfa --name mysqldb -v "$PWD/mysql/data:/var/lib/mysql" -d -e MYSQL_ROOT_PASSWORD=wowsuchsecret -e MYSQL_DATABASE=pfa he4dless/pfa-docker-desafio1-mysql
     - docker exec -i mysqldb bash -c 'mysql -uroot -p"$MYSQL_ROOT_PASSWORD" pfa < seed.sql'
