@@ -5,3 +5,4 @@ temp/
 /coverage.data
 /coverage/
 .env
+mysql/data
